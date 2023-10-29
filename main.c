@@ -229,21 +229,30 @@ int main() {
                         printf("Enter the int to push: ");
                         int ivalue;
                         fflush(stdin);
-                        scanf("%d", &ivalue);
+                        if (scanf("%d", &ivalue) != 1){
+                            printf("Invalid input\n");
+                            break;
+                        }
                         intPush(stack, ivalue);
                         break;
                     case 2:
                         printf("Enter the char to push: ");
                         fflush(stdin);
                         char cvalue;
-                        scanf("%c", &cvalue);
+                        if (scanf("%c", &cvalue) != 1){
+                            printf("Invalid input\n");
+                            break;
+                        }
                         charPush(stack, cvalue);
                         break;
                     case 3:
                         printf("Enter the float to push: ");
                         float fvalue;
                         fflush(stdin);
-                        scanf("%f", &fvalue);
+                        if (scanf("%f", &fvalue) != 1){
+                            printf("Invalid input\n");
+                            break;
+                        }
                         floatPush(stack, fvalue);
                         break;
                     default:
