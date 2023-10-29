@@ -103,7 +103,7 @@ void floatPush(struct Stack *stack, float floatData){
 
 int popInt(struct Stack *stack) {
     if (isEmpty(stack)) {
-        fprintf(stderr, "Stack underflow. Cannot pop from an empty stack.\n");
+        printf("Stack underflow. Cannot pop from an empty stack.\n");
         exit(1);
     }
     struct StackNode *topNode = stack->top;
@@ -116,7 +116,7 @@ int popInt(struct Stack *stack) {
 
 char popChar(struct Stack *stack) {
     if (isEmpty(stack)) {
-        fprintf(stderr, "Stack underflow. Cannot pop from an empty stack.\n");
+        printf("Stack underflow. Cannot pop from an empty stack.\n");
         exit(1);
     }
     struct StackNode *topNode = stack->top;
@@ -129,7 +129,7 @@ char popChar(struct Stack *stack) {
 
 float popFloat(struct Stack *stack) {
     if (isEmpty(stack)) {
-        fprintf(stderr, "Stack underflow. Cannot pop from an empty stack.\n");
+        printf("Stack underflow. Cannot pop from an empty stack.\n");
         exit(1);
     }
     struct StackNode *topNode = stack->top;
@@ -142,7 +142,7 @@ float popFloat(struct Stack *stack) {
 
 union Data peek(struct Stack *stack) {
     if (isEmpty(stack)) {
-        fprintf(stderr, "Stack is empty. Cannot peek.\n");
+        printf("Stack is empty. Cannot peek.\n");
     } else {
         return stack->top->stackData;
     }
